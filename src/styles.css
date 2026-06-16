@@ -6,6 +6,13 @@
     --main-background: #e29c5f;
     --text-accent: #e2de5f;
     --text-secondary: #864a17;
+
+    /*
+        this neat little value affects how much the lightness of the background
+        changes between the broader page and its body! check the code under the 
+        #main-body selector for more details B) 
+    */
+    --background-variation: 15; 
 }
 /* prevent overflow so that the separator doesn't cause horizontal scroll bars */
 body {
@@ -82,10 +89,20 @@ body {
     translate: -40px 0;
 }
 
+#main-body {
+    margin: 5% 10%;
+    padding: 0 10px 5px 10px;
+    /* neat little CSS trick - synthesize a lighter version of the background on the fly */
+    background-color:hsl(from var(--main-background) h s calc(l + var(--background-variation)));
+    border-radius: 5%;
+    border: var(--text-secondary) 4px solid;
+}
+
 #main-body h2 {
     color: var(--text-secondary);
     letter-spacing: 2px;
     font-size: 40px;
+    margin-bottom: 5px;
 }
 
 #main-body h2::before {
@@ -96,4 +113,12 @@ body {
     margin-right: 10px;
     translate: 0 10px; /* vertically center before element */
     background: url("../assets/moving-day-icon.ico") center / contain no-repeat;
+}
+
+#main-body p {
+    font-family: 'Pliant', sans-serif;
+}
+
+#main-body p i {
+    color: cornflowerblue;
 }
