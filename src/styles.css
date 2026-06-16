@@ -1,7 +1,66 @@
-:root() {
+:root {
     --main-background: #e29c5f;
+    --text-accent: #e2de5f;
 }
-
+/* prevent overflow so that the separator doesn't cause horizontal scroll bars */
 body {
     background-color: var(--main-background);
+    overflow-x: hidden;
+}
+
+#main-title {
+    text-shadow: var(--text-accent) 2px 0px;
+}
+
+#main-title, #subtitle, #attribution {
+    text-align: center;
+}
+
+#logo-img {
+    display: block;
+    margin: 0 auto;
+}
+/* position and offset the boxes to either side of the logo */
+#leftside-boxes, #rightside-boxes {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    position: absolute;
+    top: 23%;
+}
+
+#rightside-boxes {
+    right: 1%;
+}
+
+#firstbox-left, #thirdbox-right {
+    translate: -50px 0;
+}
+
+#thirdbox-left, #firstbox-right {
+    translate: 50px 0;
+}
+
+#whale-one, #whale-two {
+    position: absolute;
+    scale: 20%;
+}
+
+#whale-one {
+    top: 2%;
+    left: 2%;
+    transform: scaleX(-1); /* horizontal flip */
+}
+
+#whale-two {
+    top: 30%;
+    right: 11%;
+}
+
+#separator {
+    width: 120%;
+    min-height: 109px;
+    background-image: url("../assets/big box.png");
+    background-repeat: repeat-x; 
+    translate: -40px 0;
 }
