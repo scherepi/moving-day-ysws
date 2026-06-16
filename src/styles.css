@@ -1,3 +1,6 @@
+/* styled by j. schere in june of 2026, with many thanks to michael gira (for existing, not because he has anything to do with code) */
+/* fonts from the googler!! */
+@import url('https://fonts.googleapis.com/css2?family=Pliant:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
     /* using color variables makes changing things way easier! */
     --main-background: #e29c5f;
@@ -21,6 +24,13 @@ body {
 #attribution {
     font-style: italic;
     text-shadow: #b2863a 2px 2px;
+}
+
+#submit-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 #logo-img {
