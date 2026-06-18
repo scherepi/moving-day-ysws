@@ -33,11 +33,16 @@ body {
     text-shadow: #b2863a 2px 2px;
 }
 
-#submit-button {
+#submit-container {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+}
+
+#submit-button {
+    align-self: center;
+    justify-self: center;
 }
 
 #logo-img {
