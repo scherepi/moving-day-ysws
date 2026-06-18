@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>box bay guide!</title>
+        <link rel="icon" type="image/x-icon" href="../assets/moving-day-icon.ico">
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <div id="floating-logo"></div>
+        <div id="intro">
+            <h1>how to publish your container to box bay!</h1>
+            <h3><strong>CONGRATS ON CONTAINERIZING YOUR PROJECT!</strong> now that you've got your container image, time to submit it to <i>box bay</i>, our awesome container registry!</h3>
+        </div>
+        <div id="guide">
+            <div class="step" id="step-one">
+                <h3><strong>step one: </strong> tag the image so that it points to box bay!</h3>
+                <p>$ docker image tag <i>YOURCONTAINERNAMEHERE</i> boxbay.hackclub.com/<i>YOURIMAGENAME</i></p>
+            </div>
+            <div class="step" id="step-two">
+                <h3><strong>step two:</strong> push it to the registry!</h3>
+                <p>$ docker push boxbay.hackclub.com/<i>YOURIMAGENAME</i></p>
+            </div>
+            <div class="step" id="step-three">
+                <h3><strong>step three:</strong> pull it back from the registry to check that it worked, and then YOU'RE DONEEE</h3>
+                <p>$ docker pull boxbay.hackclub.com/<i>YOURIMAGENAME</i></p>
+            </div>
+            <div id="congrats">
+                <h2><strong>YIPPEEE!!</strong> YOU JUST PUSHED YOUR FIRST CONTAINER TO BOX BAY!<br>now you have a link you can put in the form! <i>(boxbay.hackclub.com/yourimagename)</i></h2>
+            </div>
+        </div>
+    </body>
+</html>

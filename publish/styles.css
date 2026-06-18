@@ -1,0 +1,122 @@
+/* fonts from the googler: vt323 and pliant */ 
+/* VT323 */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+/* Pliant */
+@import url('https://fonts.googleapis.com/css2?family=Pliant:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --main-background: #e29c5f;
+    --text-accent: #e2de5f;
+    --text-secondary: #864a17;
+    --text-strong: #f01352;
+
+    /* controls lightness variation between page background and content body background*/
+    --background-variation: 15;
+}
+
+body {
+    background-color: var(--main-background);
+    overflow-x: hidden;
+}
+
+#floating-logo {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    min-width: 20px;
+    min-height: 20px;
+    background-image: url("../assets/moving-day-logo.png");
+}
+
+#guide {
+    margin: 5% 10%;
+    padding: 0 10px 5px 10px;
+    /* same CSS trick as the main page! check there for my annotations :) */
+    background-color: hsl(from var(--main-background) h s calc(l + var(--background-variation)));
+    border-radius: 5%;
+    border: var(--text-secondary) 4px solid;
+}
+
+#intro {
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    align-items: column;
+    margin-bottom: 20px;
+}
+
+#intro h1 {
+    width: 100%;
+    font-family: 'Pliant', sans-serif;
+    text-shadow: var(--text-accent) 2px 0px;
+    text-align: center;
+    font-size: 40px;
+}
+
+#intro h3 {
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+    text-shadow: #b2863a 2px 2px;
+}
+
+#intro h3 strong, .step h3 strong {
+    font-style: italic;
+    text-shadow: var(--text-strong) 2px 0px;
+}
+
+#intro h3 i {
+    color: skyblue;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+}
+
+.step {
+    width: auto;
+    margin: 5% 3% 5% 3%; 
+    padding-left: 5px;
+    box-sizing: border-box;
+
+    background-color: hsl(from var(--main-background) h s calc(l - 5));
+
+    border-style: dashed;
+    border-width: 2px;
+    border-color: hsl(from var(--text-secondary) h calc(s + var(--background-variation)) l);
+}
+
+.step h3 {
+    font-family: 'Pliant', sans-serif;
+    letter-spacing: 5%;
+}
+
+.step p {
+    background-color: #8895ab;
+    /* tip: slightly off-white colors help make things feel less plasticky and harsh */
+    color: #eef;
+    /* always set backup fonts just in case things don't render on the client side!*/
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+    margin: 5px 4px;
+    padding: 3px 2px; 
+}
+.step p i {
+    color: black;
+    text-decoration: underline;
+}
+
+#congrats {
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Pliant', sans-serif;
+}
+
+#congrats h2 strong {
+    text-shadow: var(--text-strong) 3px 0px;
+}
+
+#congrats h2 i {
+    color: rgb(30, 82, 154);
+    font-family: 'VT323', monospace;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}

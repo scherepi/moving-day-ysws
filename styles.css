@@ -1,5 +1,6 @@
 /* styled by j. schere in june of 2026, with many thanks to michael gira (for existing, not because he has anything to do with code) */
 /* fonts from the googler!! */
+/* Pliant from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Pliant:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
     /* using color variables makes changing things way easier! */
@@ -49,6 +50,9 @@ body {
     display: block;
     margin: 0 auto;
 }
+
+/* DECOR ITEMS POSITIONING */
+
 /* position and offset the boxes to either side of the logo */
 #leftside-boxes, #rightside-boxes {
     display: flex;
