@@ -3,7 +3,7 @@
  <html lang="en">
     <head>
         <title>how to move</title>
-        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="/tutorial/styles.css">
         <link rel="icon" type="image/x-icon">
     </head>
     <body>
@@ -11,15 +11,21 @@
             <h1>how to move!</h1>
             <h3>a <a href="https://movingday.hackclub.com">Moving Day</a> tutorial by guac :)</h3>
         </div>
-        <div id="tutorial-body">
-            <div id="step-1">
+        <div class="section" id="tutorial-body">
+            <div class="step" id="step-1">
                 <h1>step 1: plan!</h1>
                 <p>this step's pretty easy. review your project, think about the steps YOU take to make it work on your machine, and make a note of a few things:</p>
                 <ul>
                     <li>what software does your project need to run? what runtime?</li>
                     <li>are there any dependencies that need to be installed and configured? do they need specific environment variables set?</li>
-                    <li></li>
+                    <li>does your project connect to anything external? does it need specific ports exposed for connections?</li>
+                    <li>what are your project's storage needs? are you going to need to set up separate volumes?</li>
                 </ul>
+                <p>consider all of these pretty carefully and make notes. they'll determine how you write your Dockerfile!</p>
+            </div>
+            <div class="step" id="step-2">
+                <h1>step 2: set up Docker</h1>
+                <p>Docker's pretty easy to set up, and </p>
             </div>
         </div>
     </body>
