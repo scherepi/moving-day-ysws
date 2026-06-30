@@ -7,6 +7,7 @@
     --main-background: #e29c5f;
     --text-accent: #e2de5f;
     --text-secondary: #864a17;
+    --background-warning: #ff5900;
 
     /*
         this neat little value affects how much the lightness of the background
@@ -19,6 +20,41 @@
 body {
     background-color: var(--main-background);
     overflow-x: hidden;
+}
+
+#eviction-notice {
+    position: absolute;
+    top: 11%;
+    right: 15%;
+    opacity: 90%;
+    display: flex;
+    min-width: 50%;
+    min-height: 32%;
+    background-color: var(--background-warning);
+    color: white;
+    font-family: 'Pliant', sans-serif;
+    align-items: center;
+    gap: 10px;
+    z-index: 3;
+    padding: 20px;
+    border: dashed white 6px;
+}
+
+#eviction-img {
+    flex-grow: 1;
+    min-width: 110px;
+    min-height: 120px;
+    background-image: url("./assets/big\ box.png");  
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#eviction-label {
+    flex-grow: 2;
+    font-size: 2em;
+    border: white solid 4px;
+    border-radius: 6%;
+    padding: 50px 15px;
 }
 
 #main-title {
